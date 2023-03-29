@@ -1,22 +1,16 @@
 const arc = require('arcsecond/index.ts');
-const memory = require('memory.js');
+import { memory } from 'memory.js';
 
 function KB(KBs = 1) {
-    if (KBs >= 1024) {
-        throw new Error(`Kilobyte: ammount '${KBs}'KB is bigger than 1MB so use it instead`)
-    }
     return memory(KBs * 1024);
 };
 
 function MB(MBs = 1) {
-    if (KBs >= 1024) {
-        throw new Error(`Megabyte: ammount '${MBs}'KB is bigger than 1GB so use it instead`)
-    }
-    return KB(1024);
+    return KB(1024 * MBs);
 };
 
 function GB(GBs = 1) {
-    return MB(1024)
+    return MB(1024 * GBs)
 };
 
 time = 0;
