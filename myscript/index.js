@@ -1,4 +1,4 @@
-const arc = require('arcsecond/index.ts');
+const arch = require('arch/index');
 let memory = require('memory');
 memory = memory.memory;
 
