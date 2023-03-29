@@ -1,5 +1,6 @@
 const arc = require('arcsecond/index.ts');
-import { memory } from 'memory.js';
+let memory = require('memory');
+memory = memory.memory;
 
 function KB(KBs = 1) {
     return memory(KBs * 1024);
