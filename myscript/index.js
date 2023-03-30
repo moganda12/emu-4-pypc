@@ -1,5 +1,5 @@
-const arch = require(['arch/arch'], function (arch) {});
-const memory = require(['memory'], function(memory) {});
+const arch = require('./arch/arch');
+const memory = require('./memory');
 
 function Byte(Bytes = 256) {
     return memory.crateMemory(Bytes)
