@@ -1,5 +1,5 @@
-const arch = require(['arch/index'], function arch() {});
-let memory = require(['memory'], function memory() {});
+const arch = require(['arch/arch'], function (arch) {});
+let memory = require(['memory'], function(memory) {});
 memory = memory.memory;
 
 function KB(KBs = 1) {
