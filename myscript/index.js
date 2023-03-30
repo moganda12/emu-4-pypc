@@ -1,6 +1,6 @@
 const arch = require(['arch/arch'], function (arch) {});
 let memory = require(['memory'], function(memory) {});
-memory = memory.memory();
+memory = memory.crateMemory();
 
 function KB(KBs = 1) {
     return memory(KBs * 1024);
