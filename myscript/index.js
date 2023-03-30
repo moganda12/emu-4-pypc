@@ -1,9 +1,12 @@
 const arch = require(['arch/arch'], function (arch) {});
-let memory = require(['memory'], function(memory) {});
-memory = memory.crateMemory;
+const memory = require(['memory'], function(memory) {});
+
+function Byte(Bytes = 256) {
+    return memory.crateMemory(Bytes)
+};
 
 function KB(KBs = 1) {
-    return memory(KBs * 1024);
+    return Byte(KBs * 1024);
 };
 
 function MB(MBs = 1) {
@@ -17,9 +20,9 @@ function GB(GBs = 1) {
 time = 0;
 
 class CPU {
-    constructor(memoryLen) {
-        this.memory = memory(memoryLen);
-        this.F_ROM = MB()
+    constructor(memory) {
+        this.memory = memory;
+        this.F_ROM = MB();
 
         this.regnames = [
             'r0', 'r1', 'r2', 'r3',
