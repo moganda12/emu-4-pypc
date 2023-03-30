@@ -24,7 +24,7 @@ class CPU {
         this.regnames = [
             'r0', 'r1', 'r2', 'r3',
             'r4', 'r5', 'r6', 'r7',
-            'acc'
+            'acc', 'io0', 'io1', 'io2'
         ];
 
         this.ip = memory(8);
